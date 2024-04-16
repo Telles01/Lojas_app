@@ -12,9 +12,12 @@ Rails.application.routes.draw do
   post 'lojas', to: 'lojas#create'
 
   #show form to edit a loja
-  get 'lojas/:id/edit', to: 'lojas#edit'
+  get 'lojas/:id/edit', to: 'lojas#edit', as: 'edit_loja'
 
   #update a loja
-  patch 'lojas/:id', to: 'lojas#update'
+  path 'lojas/:id', to: 'lojas#update'
+
+#delete a loja
+  delete 'lojas/:id', to: 'lojas#destroy'
 
 end

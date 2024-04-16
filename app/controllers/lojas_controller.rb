@@ -23,7 +23,16 @@ class LojasController < ApplicationController
   end
 
   def update
+    @loja = Loja.find(params[:id])
+    @loja.update(loja_params)
+    redirect_to loja_path(@loja)
 
+  end
+
+  def destroy
+    @loja = Loja.find(params[:id])
+    @loja.destroy
+    redirect_to lojas_path
   end
 
 private

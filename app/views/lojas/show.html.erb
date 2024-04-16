@@ -4,3 +4,9 @@
 <p>Name: <%= @loja.name %></p>
 <p>Address: <%= @loja.address %></p>
 <p>Stars: <%= @loja.stars %></p>
+
+
+<%= link_to 'Edit' edit_loja_path(@loja) %>
+
+
+<%=link_to 'Remove this Loja', loja_path, method: :delete %>

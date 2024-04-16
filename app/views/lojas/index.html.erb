@@ -3,6 +3,9 @@
 
 <ul>
 <% @lojas.each  do |loja| %>
-<li><%= loja.name %></li>
+<li><%= link_to loja.name, loja_path(loja) %></li>
 <% end %>
 </ul>
+
+
+<%= link_to 'New Loja', lojas_new_path %>
